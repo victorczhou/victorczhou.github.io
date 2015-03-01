@@ -4,11 +4,17 @@
 </head>
     
 <body bgcolor="black">
-<img id = "hover" onmouseout= "scare()" src="blackhover.jpg" width="25" height="25">
+<img id = "hover" onmouseout= "scare1()" src="blackhover.jpg" width="25" height="25">
 <!--<onkeydown = "scare()"></onkeydown>-->
 <script>
-function scare() {
-    document.body.background = "pale1366.jpg";
+function scare1() {
+    document.body.background = "pale1600.jpg";
+    var audio = new Audio("scream.mp3");
+    audio.play();
+    window.setTimeout(scare2,2000);
+}
+function scare2() {
+    document.body.background = "pale1080.jpg";
     var audio = new Audio("scream.mp3");
     audio.play();
 }
